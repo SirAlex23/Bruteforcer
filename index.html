@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BruteForcer — Demo & Docs</title>
+  <link rel="stylesheet" href="bruteforcer.css"> </head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">BF</div>
+      <div class="title">
+        <h1>BruteForcer</h1>
+        <p class="lead">Proyecto educativo: modos Diccionario y Fuerza Bruta (limitada) para hashes SHA256.</p>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-ghost" href="https://github.com/siralex23/bruteforcer" target="_blank" rel="noopener">Ver en GitHub</a>
+        <a class="btn btn-primary" id="download-zip-btn" href="#" target="_blank" rel="noopener">⤓ Descargar ZIP</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="meta"><strong>Tecnologías:</strong> Python 3 • hashlib • itertools • uso en laboratorio</div>
+
+        <div class="warn">
+          <strong>Importante:</strong> Solo usar en entornos controlados (tu equipo, VMs o laboratorios). Probar contra hosts o cuentas de terceros sin permiso puede ser ilegal.
+        </div>
+
+        <h2>Resumen</h2>
+        <p class="lead">Este proyecto incluye dos modos: <strong>Modo 1 — Diccionario</strong> (usa "diccionario.txt") y <strong>Modo 2 — Fuerza bruta limitada</strong> (genera combinaciones hasta una longitud máxima). El objetivo es ilustrar y comparar ambas técnicas.</p>
+
+        <h2>Cómo probar (local)</h2>
+        <ol>
+          <li>Clona el repo:
+            <pre class="code">git clone https://github.com/siralex23/bruteforcer.git
+cd bruteforcer</pre>
+          </li>
+          <li>Opcional: crea y activa un entorno virtual:
+            <pre class="code">python3 -m venv env
+source env/bin/activate</pre>
+          </li>
+          <li>Ejecuta el script y elige modo:
+            <pre class="code">python3 bruteforcer.py
+# Cuando se muestre el menú elige 1 (Diccionario) o 2 (Fuerza bruta)</pre>
+          </li>
+        </ol>
+
+        <h2>Demos</h2>
+        <div class="grid-demos">
+          <div class="card">
+            <strong>Demo Ataque de Diccionario (Modo 1)</strong>
+            <div class="demo-wrap" >
+              <img src="demo dict.gif" alt="Demo Ataque Diccionario" class="demo">
+            </div>
+            <p style="margin-top:10px;color:var(--muted);font-size:13px">
+                Demostración del modo diccionario usando el archivo `diccionario.txt`.
+            </p>
+          </div>
+          
+          <div class="card">
+            <strong>Demo Fuerza Bruta (Modo 2)</strong>
+            <div class="demo-wrap" >
+              <img src="demo brute.gif" alt="Demo Fuerza Bruta" class="demo">
+            </div>
+            <p style="margin-top:10px;color:var(--muted);font-size:13px">
+                Demostración del modo fuerza bruta limitada (genera combinaciones automáticamente).
+            </p>
+          </div>
+        </div>
+
+      </section>
+      
+      <aside class="card">
+        <h3>Acciones rápidas</h3>
+        <p style="margin-top:10px">
+          <a class="download" id="download-zip-cta" href="#" target="_blank" rel="noopener">⤓ Descargar proyecto (.zip)</a>
+        </p>
+        <div style="margin-top:14px">
+          <strong>Recursos</strong>
+          <p style="font-size:13px;color:var(--muted);margin:6px 0">README: <a href="https://github.com/siralex23/bruteforcer" target="_blank">Ver README</a></p>
+          <p style="font-size:13px;color:var(--muted);margin:0">Perfil: <a href="https://github.com/siralex23" target="_blank">github.com/siralex23</a></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Proyecto educativo • Uso responsable • No utilizar en sistemas ajenos sin permiso</small>
+    </footer>
+  </div>
+
+  <script>
+    const GITHUB_USER = "siralex23";
+    const GITHUB_REPO = "bruteforcer";
+    const GITHUB_BRANCH = "main";
+
+    const zipUrl = `https://github.com/${encodeURIComponent(GITHUB_USER)}/${encodeURIComponent(GITHUB_REPO)}/archive/refs/heads/${encodeURIComponent(GITHUB_BRANCH)}.zip`;
+    document.getElementById("download-zip-btn").href = zipUrl;
+    document.getElementById("download-zip-cta").href = zipUrl;
+  </script>
+</body>
+</html>
