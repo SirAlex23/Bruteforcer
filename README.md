@@ -34,6 +34,6 @@
    
 3. Ejecuta:
    ```bash
-   python3 bruteforcer.py
+   py bruteforcer.py
 
 **Importante**: En el archivo **index.html** existe un zip descargable con todos los datos para que se pueda chequear que el proyecto funciona.
